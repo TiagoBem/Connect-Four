@@ -1,0 +1,219 @@
+body, html {
+    height: 100%;
+    background: url(black-texture-background.jpg) no-repeat center center fixed;
+  	background-size: cover;
+  	height: 100%;
+  	color: white;
+
+}
+
+
+
+
+.logo{
+  position: relative;
+  text-align: center;
+	height: 12%;
+	width: 45%;
+  padding-left: 27%;
+}
+
+.logo1{
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 96px;
+  width: 556px;
+}
+
+.logo2{
+  position: absolute;
+  text-align: center;
+  height: 64px;
+  width: 370.6px;
+}
+
+.logo3{
+  position: absolute;
+  text-align: center;
+  height: 42.6px;
+  width: 247.06px;
+}
+
+.logo4{
+  position: absolute;
+  text-align: center;
+  height: 28.4px;
+  width: 164.7px;
+}
+
+button{
+    background-color: #2d5986;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#login {
+    text-align: right;
+    width:100%;
+    height:2.8%;
+}
+
+#pos_login {
+	font-size: 20px;
+	text-align: right;
+	width: 100%;
+	height: 2.8%;
+	display: none;
+}
+
+#logout{
+  position: absolute;
+  left: 85%;
+	top: 35%;
+}
+
+#botões {
+	position: absolute;
+	text-align: center;
+	width:1300px;
+	height:100px;
+}
+
+
+#comojogar {
+	display: none;
+	font-size: 18px;
+}
+
+#jogo {
+	position: relative;
+	display: none;
+	width:100%;
+	height:100%;
+	font-size: 18px;
+}
+
+#tabuleiro {
+	position: absolute;
+	height: 52%;
+	width: 50%;
+	left: 32%;
+	top: 5%;
+	/*border-style: outset;
+	border-width: 2px;
+	margin: auto;*/
+}
+
+#classificações {
+	display: none;
+	width: 100%;
+	font-size: 18px;
+}
+
+#relogio{
+	position: absolute;
+	height: 52%;
+	width: 50%;
+	left: 85%;
+	top: 5%;
+	font-size: 50px;
+}
+
+
+.butoes_relogio{
+	height: 10%;
+	text-align: center;
+}
+
+.input_dimensoes{
+	height:20px;
+	width:60px;
+}
+
+
+
+table {
+	width: 100%;
+}
+
+th {
+	text-align: center;
+	border-width: 1px;
+    border-style: solid;
+	padding: 30px;
+}
+
+td {
+	text-align: center;
+	border-width: 1px;
+    border-style: solid;
+	padding: 15px;
+}
+
+#butoes_pilhas{
+	display: none;
+	position: absolute;
+	height: 10%;
+	width: 50%;
+	left: 32%;
+	top: 0%;
+}
+
+.butao_pilha{
+	height: 15%;
+	display: inline-block;
+	width: 13.65%;
+	text-align: center;
+}
+
+.pilha {
+	display: inline-block;
+	width: 14.28%;
+	height: 100%;
+	background-color: #000066;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.peca_vazia {
+	display: inline-block;
+	background-color: #ffffff;
+	opacity: .1;
+	height: 14.27%;
+	width: 57%;
+	margin: auto;
+	border-radius: 50%;
+	border-width: 2px;
+    border-style: inset;
+    border-color: white;;
+}
+
+.peca_amarela {
+	display: inline-block;
+	background-color: yellow;
+	height: 14.27%;
+	width: 57%;
+	margin: auto;
+	border-radius: 50%;
+	border-width: 1px;
+    border-style: inset;
+    border-color: white;
+}
+
+.peca_vermelha {
+	display: inline-block;
+	background-color: red;
+	height: 14.27%;
+	width: 57%;
+	margin: auto;
+	border-radius: 50%;
+	border-width: 1px;
+    border-style: inset;
+    border-color: white;
+}

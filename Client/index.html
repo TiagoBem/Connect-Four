@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="4emlinha.css">
+    <script src="4emlinha.js"></script>
+    <script src="jogo.js"></script>
+    <script src="minimax.js"></script>
+    <meta charset=UTF-8>
+    <title>index</title>
+  </head>
+
+<body onload="myCanvas()">
+
+
+<!--  <div class="logo"><img class="logo1" src="oie_transparent.png"></div>  -->
+<canvas id="myCanvas" height= 96px width= 556px class="logo">
+  <!-- <img class="logo1" src="oie_transparent.png"> -->
+</canvas>
+
+
+<div id="login">
+<form id="form_login" name="login_form" method="post">
+    User: <input type="text" name="user">
+    Password: <input type="password" name="pass">
+    <input type="button" onClick="login()" class="botao" value="Entrar"> <br>
+    </form>
+</div>
+
+<div id="pos_login"></div>
+<br>
+
+
+
+<!-- Menus -->
+
+<div id="botões">
+    <button type="button" onclick="myFunction1()">Como Jogar</button>
+    <button type="button" onclick="myFunction2()">Jogar</button>
+    <button type="button" onclick="myFunction3()">Classificações</button>
+</div>
+<br>
+
+
+<!-- "div" principal -->
+
+<br>
+<br>
+<br>
+<br>
+<!-- Como jogar -->
+<div id="comojogar" >
+<strong>Posição inicial e objectivo do jogo</strong>
+<br>
+<p1>O 4 em linha pertence a uma série de jogos populares pois facilmente se aprendem as suas regras simples e o jogo consegue entreter os jogadores durante bastante tempo. O objectivo deste jogo é colocar quatro peças numa linha contínua vertical, horizontal ou diagonalmente. O jogo desenrola-se num tabuleiro quadrado de 7x6 e começa com o tabuleiro em branco.</p1>
+<br>
+<br>
+
+<strong>Como jogar as peças</strong>
+<br>
+<br>
+<p2>Ambos os jogadores jogam as suas peças no tabuleiro, uma peça por jogada. A regra é que a peça "caia" sempre. Quer dizer que a peça deve sempre ser jogada ou na linha do fundo ou sobre uma peça já colocada. A figura seguinte mostra uma posição de jogo e as cruzes verdes indicam os locais onde o jogador pode jogar uma nova peça.</p2>
+<br>
+<br>
+
+<strong>Como terminar o jogo</strong>
+<br>
+<ol>O jogo termina quando uma das condições seguintes se verificar:
+    <ul>
+    <li>Um dos jogadores coloca quatro ou mais peças numa linha contínua vertical, horizontal ou diagonalmente. Este jogador vence o jogo.</li>
+    <li>Todas as casas do tabuleiro estão ocupadas e nenhum jogador satisfaz a condição anterior de vitória. Neste caso o jogo termina em empate.</li>
+    </ul>
+</li>
+</ol>
+
+<strong>Vamos jogar?</strong>
+<br>
+<br>
+</div>
+
+
+
+<!-- Jogar -->
+
+<div id="jogo">
+  Dimensão do tabuleiro (recomendado 7x6): <br>
+  <form>
+  Largura: <input class="input_dimensoes" type="number" value="7" min="4" max="7" id="num_colunas">
+  Altura:  <input class="input_dimensoes" type="number" value="6" min="4" max="7" id="num_linhas"><br>
+<br>
+  Adversario <br>
+  Jogador <input id="jogador" name="adversario" type="radio"><br>
+  Computador <input id="computador" name="adversario" type="radio" ><br>
+<br>
+  Dificuldade: <br>
+  <input type="radio" name="dificuldade" id="facil" checked> Fácil <br>
+  <input type="radio" name="dificuldade" id="medio" > Médio <br>
+  <input type="radio" name="dificuldade" id="dificil" > Difícil
+  <br>
+  <br>
+  Quem começa primeiro? <br>
+  <input type="radio" name="first" value="jogador1" checked> Eu <br>
+  <input type="radio" name="first" value="jogador2" disabled> Adversario
+  <br>
+  <br>
+  <button type="button" onclick="join()"> Jogar </button>
+  <button type="button" onclick="reiniciar()"> Recomeçar </button>
+  <button type="button" onclick="desistir()"> Desistir </button>
+  </form>
+
+  <div id="butoes_pilhas">
+    <button class="butao_pilha" onclick="jogada_user(0)">1</button>
+    <button class="butao_pilha" onclick="jogada_user(1)">2</button>
+    <button class="butao_pilha" onclick="jogada_user(2)">3</button>
+    <button class="butao_pilha" onclick="jogada_user(3)">4</button>
+    <button class="butao_pilha" onclick="jogada_user(4)">5</button>
+    <button class="butao_pilha" onclick="jogada_user(5)">6</button>
+    <button class="butao_pilha" onclick="jogada_user(6)">7</button>
+  </div>
+
+
+    <div id="tabuleiro" onclick="">
+    </div>
+
+    <div id="relogio">
+    <label id="minutesLabel">00</label>:<label id="secondsLabel">00</label>
+    </div>
+
+    <div id="logout">
+      <button type="button" onclick="logout()"> Logout </button>
+    </div>
+
+
+</div>
+
+
+<!-- Classificações -->
+
+<div id="classificações">
+  <form>
+  Largura: <input class="input_dimensoes" type="number" value="7" min="4" max="7" id="num_colunas_ranking">
+  Altura:  <input class="input_dimensoes" type="number" value="6" min="4" max="7" id="num_linhas_ranking">
+  <button type="button" onclick="cria_classificacao()";>Ver Ranking</button>
+  <input type="radio" name="type_ranking" id="local" checked> Local
+  <input type="radio" name="type_ranking" id="multiplayer" > Multiplayer
+  <br>
+</form>
+<br>
+  <table id="tabela_classificacoes"></table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
